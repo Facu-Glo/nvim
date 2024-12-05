@@ -102,6 +102,10 @@ return {
         capabilities = capabilities,
         filetypes = { "hyprlang", "hypr", "conf" },
       })
+      lspconfig.lemminx.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+      })
     end,
   },
 }

@@ -21,6 +21,7 @@ return {
           "yaml",
           "nasm",
           "hyprlang",
+          "xml",
         },
         highlight = {
           enable = true,

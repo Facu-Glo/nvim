@@ -2,16 +2,16 @@ return {
   "3rd/image.nvim",
   enabled = false,
 
-  event = "VeryLazy",
+  event = "veryLazy",
   opts = {
     rocks = {
-      hererocks = true, -- Habilita hererocks para un entorno aislado
+      hererocks = true,
     },
   },
   config = function()
     require("image").setup({
-      backend = "kitty", -- o "ueberzug"
-      processor = "magick_rock", -- o "magick_cli"
+      backend = "kitty",
+      processor = "magick_rock",
       integrations = {
         markdown = { enabled = true },
         neorg = { enabled = true },

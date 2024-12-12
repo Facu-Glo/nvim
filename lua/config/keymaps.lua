@@ -4,13 +4,13 @@
 
 --Terminal
 --Abrir terminal y esconder
---vim.keymap.set({ "n", "t" }, "<leader>th", function()
---  Snacks.terminal()
---end, { desc = "Terminal horizontal (cwd)" })
-
 vim.keymap.set({ "n", "t" }, "<leader>t", function()
-  require("toggleterm").toggle()
-end, { desc = "Terminal horizontal (cwd)" })
+  Snacks.terminal()
+end)
+
+--vim.keymap.set({ "n", "t" }, "<leader>t", function()
+--  require("toggleterm").toggle()
+--end, { desc = "Terminal horizontal (cwd)" })
 
 --Esconder terminal (otra opcion)
 vim.keymap.set("t", "<C-esc>", "<cmd>close<cr>")

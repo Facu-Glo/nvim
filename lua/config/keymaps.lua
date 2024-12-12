@@ -5,8 +5,8 @@
 --Terminal
 --Abrir terminal y esconder
 vim.keymap.set({ "n", "t" }, "<leader>t", function()
-  Snacks.terminal()
-end)
+  require("snacks.terminal").toggle(nil, { cwd = vim.fn.getcwd() })
+end, { desc = "Toggle terminal" })
 
 --vim.keymap.set({ "n", "t" }, "<leader>t", function()
 --  require("toggleterm").toggle()

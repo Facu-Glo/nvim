@@ -20,6 +20,8 @@ return {
           "gopls",
           "jdtls",
           "hyprls",
+          "biome",
+          "cssls",
         },
       })
     end,
@@ -97,12 +99,25 @@ return {
         on_attach = on_attach,
         capabilities = capabilities,
       })
+
       lspconfig.hyprls.setup({
         on_attach = on_attach,
         capabilities = capabilities,
         filetypes = { "hyprlang", "hypr", "conf" },
       })
+
       lspconfig.lemminx.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+      })
+
+      lspconfig.biome.setup({
+        cmd = { "biome", "lsp-proxy" },
+        filetypes = { "json", "jsonc" },
+        root_dir = require("lspconfig.util").root_pattern(".git", "package.json", "biome.json", "biome.jsonc"),
+      })
+
+      lspconfig.cssls.setup({
         on_attach = on_attach,
         capabilities = capabilities,
       })

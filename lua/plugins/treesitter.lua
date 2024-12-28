@@ -22,6 +22,7 @@ return {
           "nasm",
           "hyprlang",
           "xml",
+          "rasi",
         },
         highlight = {
           enable = true,

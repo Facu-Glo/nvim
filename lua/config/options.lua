@@ -5,16 +5,10 @@
 vim.filetype.add({
   extension = {
     asm = "nasm",
-  },
-})
-vim.filetype.add({
-  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
-})
-
-vim.filetype.add({
-  extension = {
+    rasi = "rasi",
     fxml = "xml",
   },
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
 vim.o.expandtab = true
